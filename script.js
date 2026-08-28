@@ -27,10 +27,6 @@ async function checkForUpdates(isManual) {
     }
 }
 
-function manualCheckTest() {
-    checkForUpdates(true);
-}
-
 function manualCheckUpdate() {
     checkForUpdates(true);
 }
