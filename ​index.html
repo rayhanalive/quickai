@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickAI Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1B1035, #3B1E86);
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 380px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-card {
+            background: rgba(30, 28, 60, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(138, 108, 240, 0.25);
+            padding: 30px 20px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+        }
+
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px auto;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 240, 210, 0.2);
+            display: block;
+        }
+
+        .app-card h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00F0D2;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #B9A6FF;
+            margin-bottom: 25px;
+        }
+
+        .status-box {
+            background: #150d2a;
+            padding: 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #3B1E86;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background-color: #00F0D2;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00F0D2;
+        }
+
+        #version-text {
+            font-size: 14px;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .update-btn {
+            background: linear-gradient(135deg, #00F0D2, #00B8E6);
+            color: #1B1035;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 240, 210, 0.3);
+        }
+
+        .update-btn:active {
+            transform: scale(0.97);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="app-card">
+            <!-- App Logo SVG -->
+            <svg class="app-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <defs>
+                <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1B1035"/>
+                  <stop offset="55%" stop-color="#3B1E86"/>
+                  <stop offset="100%" stop-color="#6C4CE0"/>
+                </linearGradient>
+                <linearGradient id="bolt" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00F0D2"/>
+                  <stop offset="100%" stop-color="#00B8E6"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#bg)"/>
+              <circle cx="256" cy="256" r="176" fill="none" stroke="#8A6CF0" stroke-opacity="0.25" stroke-width="2"/>
+              <g stroke="#8A6CF0" stroke-opacity="0.55" stroke-width="3" fill="none">
+                <line x1="256" y1="256" x2="256" y2="120"/>
+                <line x1="256" y1="256" x2="374" y2="188"/>
+                <line x1="256" y1="256" x2="374" y2="324"/>
+                <line x1="256" y1="256" x2="256" y2="392"/>
+                <line x1="256" y1="256" x2="138" y2="324"/>
+                <line x1="256" y1="256" x2="138" y2="188"/>
+              </g>
+              <g fill="#B9A6FF">
+                <circle cx="256" cy="120" r="9"/>
+                <circle cx="374" cy="188" r="9"/>
+                <circle cx="374" cy="324" r="9"/>
+                <circle cx="256" cy="392" r="9"/>
+                <circle cx="138" cy="324" r="9"/>
+                <circle cx="138" cy="188" r="9"/>
+              </g>
+              <path d="M276 150 L196 276 L244 276 L228 366 L322 224 L268 224 Z" fill="url(#bolt)"/>
+              <circle cx="256" cy="256" r="46" fill="none" stroke="#00F0D2" stroke-opacity="0.35" stroke-width="6"/>
+            </svg>
+
+            <h2>QuickAI Hub</h2>
+            <p class="subtitle">Smart AI Ecosystem & Auto-Update</p>
+            
+            <div class="status-box">
+                <span class="dot"></span>
+                <p id="version-text">Version: v1.0</p>
+            </div>
+
+            <button class="update-btn" onclick="manualCheckUpdate()">Check for Updates</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
