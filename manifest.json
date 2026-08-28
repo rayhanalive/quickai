@@ -1,15 +1,16 @@
 {
-  "name": "QuickAI Hub",
   "short_name": "QuickAI",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#1B1035",
-  "theme_color": "#00F0D2",
+  "name": "QuickAI Hub",
   "icons": [
     {
       "src": "https://i.imgur.com/PKRRQuD.jpeg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }
-  ]
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#00F0D2",
+  "background_color": "#1B1035",
+  "description": "Smart AI Ecosystem & Auto-Update"
 }
