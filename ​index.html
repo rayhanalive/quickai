@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickAI Hub</title>
+    <link rel="manifest" href="manifest.json">
     <style>
         * {
             margin: 0;
@@ -46,6 +47,7 @@
             margin: 0 auto 15px auto;
             border-radius: 18px;
             box-shadow: 0 8px 20px rgba(0, 240, 210, 0.2);
+            object-fit: cover;
             display: block;
         }
 
@@ -113,40 +115,8 @@
 
     <div class="app-container">
         <div class="app-card">
-            <!-- App Logo SVG -->
-            <svg class="app-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <defs>
-                <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#1B1035"/>
-                  <stop offset="55%" stop-color="#3B1E86"/>
-                  <stop offset="100%" stop-color="#6C4CE0"/>
-                </linearGradient>
-                <linearGradient id="bolt" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#00F0D2"/>
-                  <stop offset="100%" stop-color="#00B8E6"/>
-                </linearGradient>
-              </defs>
-              <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#bg)"/>
-              <circle cx="256" cy="256" r="176" fill="none" stroke="#8A6CF0" stroke-opacity="0.25" stroke-width="2"/>
-              <g stroke="#8A6CF0" stroke-opacity="0.55" stroke-width="3" fill="none">
-                <line x1="256" y1="256" x2="256" y2="120"/>
-                <line x1="256" y1="256" x2="374" y2="188"/>
-                <line x1="256" y1="256" x2="374" y2="324"/>
-                <line x1="256" y1="256" x2="256" y2="392"/>
-                <line x1="256" y1="256" x2="138" y2="324"/>
-                <line x1="256" y1="256" x2="138" y2="188"/>
-              </g>
-              <g fill="#B9A6FF">
-                <circle cx="256" cy="120" r="9"/>
-                <circle cx="374" cy="188" r="9"/>
-                <circle cx="374" cy="324" r="9"/>
-                <circle cx="256" cy="392" r="9"/>
-                <circle cx="138" cy="324" r="9"/>
-                <circle cx="138" cy="188" r="9"/>
-              </g>
-              <path d="M276 150 L196 276 L244 276 L228 366 L322 224 L268 224 Z" fill="url(#bolt)"/>
-              <circle cx="256" cy="256" r="46" fill="none" stroke="#00F0D2" stroke-opacity="0.35" stroke-width="6"/>
-            </svg>
+            <!-- Imgur Logo Link -->
+            <img src="https://i.imgur.com/PKRRQuD.jpeg" alt="QuickAI Logo" class="app-logo">
 
             <h2>QuickAI Hub</h2>
             <p class="subtitle">Smart AI Ecosystem & Auto-Update</p>
